@@ -24,7 +24,7 @@ const TaskList = () => {
         <div className='md:px-64 mx-auto py-5'>
             <ul className=''>
                 {tasks.map((task, index) => (
-                    <li className='flex flex-row justify-between px-2 py-4 shadow-xl my-2 rounded-lg items-center' key={index}>
+                    <li className='flex flex-row justify-between px-2 py-4 shadow-xl my-2 cursor-pointer hover:shadow-lg border-2 hover:shadow-indigo-100 rounded-lg items-center' key={index}>
                         {task}
                         <div className='flex flex-row justify-between gap-4'>
                             <button className='' onClick={() => handleEditTask(index)}><CiEdit size={30} /></button>
