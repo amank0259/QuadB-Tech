@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const TaskInput = () => {
+const TaskInput = ({ addTask }) => {
     const [task, setTask] = useState('');
 
     // function to handle the input and set the task item
