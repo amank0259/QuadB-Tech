@@ -26,7 +26,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className='border-2 h-screen w-screen bg-gray-100 overflow-y-scroll'>
       <h1 className='text-center text-2xl md:text-4xl py-2 font-semibold'>To-Do List</h1>
       <TaskInput addTask={addTask} />           {/* add task input component and pass the action(add tasks)*/}
       <TaskList tasks={tasks} deleteTask={deleteTask} editTask={editTask} />            {/* add task list component and pass the actions(edit, delete tasks)*/}

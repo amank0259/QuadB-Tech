@@ -1,14 +1,19 @@
 import React from 'react';
+import { CiEdit } from "react-icons/ci";
+import { MdDeleteSweep } from "react-icons/md";
+
 
 const TaskList = ({ tasks, deleteTask, editTask }) => {
     return (
-        <div className='px-64 mx-auto my-5'>
-            <ul className='list-none'>
+        <div className='md:px-64 mx-auto py-5'>
+            <ul className=''>
                 {tasks.map((task, index) => (
-                    <li className='mx-3' key={index}>
+                    <li className='flex flex-row justify-between px-2 py-4 shadow-xl my-2 rounded-lg items-center' key={index}>
                         {task}
-                        <button className='ml-3' onClick={() => editTask(index)}>Edit</button>
-                        <button className='ml-3' onClick={() => deleteTask(index)}>Delete</button>
+                        <div className='flex flex-row justify-between gap-4'>
+                            <button className='' onClick={() => editTask(index)}><CiEdit size={30} /></button>
+                            <button className='' onClick={() => deleteTask(index)}><MdDeleteSweep size={30} /></button>
+                        </div>
                     </li>
                 ))}
             </ul>
