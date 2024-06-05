@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react';
+import TaskInput from './components/TaskInput'
+import TaskList from './components/TaskList'
 
-function App() {
+const App = () => {
+
   return (
     <div>
-      <h1 className='text-center text-xl md:text-4xl font-semibold'>TO-Do List</h1>
-
+      <h1 className='text-center text-2xl md:text-4xl py-2 font-semibold'>To-Do List</h1>
+      <TaskInput />           {/* add task input component */}
+      <TaskList />            {/* add task list component */}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
