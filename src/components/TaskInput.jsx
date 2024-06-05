@@ -3,7 +3,7 @@ import { FaPlus } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
 import { addTask } from '../redux/reducer';
 
-const TaskInput = ({ addTask }) => {
+const TaskInput = () => {
     const [task, setTask] = useState('');
     const dispatch = useDispatch();
 
