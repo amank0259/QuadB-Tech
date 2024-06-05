@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { FaPlus } from "react-icons/fa";
+import { useDispatch } from 'react-redux';
+import { addTask } from '../redux/reducer';
 
 const TaskInput = ({ addTask }) => {
     const [task, setTask] = useState('');
+    const dispatch = useDispatch();
 
     // function to handle the input and set the task item
     const handleInputChange = (e) => {
@@ -13,7 +16,7 @@ const TaskInput = ({ addTask }) => {
     // function to add the task 
     const handleAddTask = () => {
         if (task.trim()) {
-            addTask(task);
+            dispatch(addTask(task)); {/*dispatch the action(add task) */ }
             setTask('');
         }
     };
